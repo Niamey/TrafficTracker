@@ -1,6 +1,9 @@
-﻿using iRely.Common;
+﻿
+using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
@@ -8,11 +11,16 @@ using System.Text;
 
 namespace Application_TrafficTracker
 {
-   public static class ConnectionEncriptor 
+   public class ConnectionEncriptor 
     {
-      public  static byte[] EncryptStringToBytes_Aes(string plainText, byte[] Key, byte[] IV)
+        private static IConfiguration _configuration;
+
+        public ConnectionEncriptor(IConfiguration configuration)
         {
-            
+            _configuration = configuration;
+        }
+        public  static byte[] EncryptStringToBytes_Aes(string plainText, byte[] Key, byte[] IV)
+        {          
             if (plainText == null || plainText.Length <= 0)
                 throw new ArgumentNullException("plainText");
             if (Key == null || Key.Length <= 0)
@@ -27,12 +35,19 @@ namespace Application_TrafficTracker
             {
                 aesAlg.Key = Key;
                 aesAlg.IV = IV;
-
-                // Create an encryptor to perform the stream transform.
-                ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
+            using (StreamWriter sw = new StreamWriter(_configuration.GetSection("").ToString(), false, System.Text.Encoding.Default))
+            {
+                sw.WriteLine(aesAlg.Key);
+            }
+            using (StreamWriter sw = new StreamWriter(_configuration.GetSection("").ToString(), true, System.Text.Encoding.Default))
+            {
+                sw.WriteLine(IV);
+            }
+                    // Create an encryptor to perform the stream transform.
+             ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
 
                 // Create the streams used for encryption.
-                using (MemoryStream msEncrypt = new MemoryStream())
+            using (MemoryStream msEncrypt = new MemoryStream())
                 {
                     using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
                     {
@@ -49,8 +64,9 @@ namespace Application_TrafficTracker
             // Return the encrypted bytes from the memory stream.
             return encrypted;
         }
-
-       public static string DecryptStringFromBytes_Aes(byte[] cipherText, byte[] Key, byte[] IV)
+   
+        
+        public static string DecryptStringFromBytes_Aes(byte[] cipherText, byte[] Key, byte[] IV)
         {
             // Check arguments.
             if (cipherText == null || cipherText.Length <= 0)

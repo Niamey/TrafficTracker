@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Olga.Korneva\\source\\repos\\Application-TrafficTracker\\Application-TrafficTracker\\Application-TrafficTracker.csproj": {}
+    "D:\\Projects\\TrafficTracker\\TrafficTracker\\Application-TrafficTracker\\Application-TrafficTracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Olga.Korneva\\source\\repos\\Application-TrafficTracker\\Application-TrafficTracker\\Application-TrafficTracker.csproj": {
+    "D:\\Projects\\TrafficTracker\\TrafficTracker\\Application-TrafficTracker\\Application-TrafficTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Olga.Korneva\\source\\repos\\Application-TrafficTracker\\Application-TrafficTracker\\Application-TrafficTracker.csproj",
+        "projectUniqueName": "D:\\Projects\\TrafficTracker\\TrafficTracker\\Application-TrafficTracker\\Application-TrafficTracker.csproj",
         "projectName": "Application-TrafficTracker",
-        "projectPath": "C:\\Users\\Olga.Korneva\\source\\repos\\Application-TrafficTracker\\Application-TrafficTracker\\Application-TrafficTracker.csproj",
+        "projectPath": "D:\\Projects\\TrafficTracker\\TrafficTracker\\Application-TrafficTracker\\Application-TrafficTracker.csproj",
         "packagesPath": "C:\\Users\\Olga.Korneva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Olga.Korneva\\source\\repos\\Application-TrafficTracker\\Application-TrafficTracker\\obj\\",
+        "outputPath": "D:\\Projects\\TrafficTracker\\TrafficTracker\\Application-TrafficTracker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -42,6 +42,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "IKVM": {
+              "target": "Package",
+              "version": "[8.1.5717, )"
+            },
             "Microsoft.Extensions.Configuration.CommandLine": {
               "target": "Package",
               "version": "[3.1.6, )"
@@ -57,6 +61,10 @@
             "Microsoft.Extensions.Logging.Configuration": {
               "target": "Package",
               "version": "[3.1.6, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             },
             "System.Configuration.ConfigurationManager": {
               "target": "Package",

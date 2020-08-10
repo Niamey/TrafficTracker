@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5F9ZukxY/uzne/fcWeN+5EeRqMO3xMU+Qa2CmhsVBo7Sj1H20Ma7SzZX+g3AwfK4yUq7Hq92B4xh2NbhDbLwdw==",
+  "dgSpecHash": "peqyZnJeQPsWzXgK8ueck/K2umw8pCg1lEmL5ptYSsfdcB04gAJ2/OhMvRDGw6/Ks1Yl2sVOi3rDSyFJhg/VAg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Olga.Korneva\\source\\repos\\Application-TrafficTracker\\Application-TrafficTracker\\Application-TrafficTracker.csproj",
+  "projectFilePath": "D:\\Projects\\TrafficTracker\\TrafficTracker\\Application-TrafficTracker\\Application-TrafficTracker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Olga.Korneva\\.nuget\\packages\\antlr\\3.4.1.9004\\antlr.3.4.1.9004.nupkg.sha512",
     "C:\\Users\\Olga.Korneva\\.nuget\\packages\\autofac\\3.5.0\\autofac.3.5.0.nupkg.sha512",
@@ -15,6 +15,7 @@
     "C:\\Users\\Olga.Korneva\\.nuget\\packages\\epplus\\4.1.0\\epplus.4.1.0.nupkg.sha512",
     "C:\\Users\\Olga.Korneva\\.nuget\\packages\\fluentvalidation\\6.2.1\\fluentvalidation.6.2.1.nupkg.sha512",
     "C:\\Users\\Olga.Korneva\\.nuget\\packages\\ideablade.devforce.core\\7.4.0\\ideablade.devforce.core.7.4.0.nupkg.sha512",
+    "C:\\Users\\Olga.Korneva\\.nuget\\packages\\ikvm\\8.1.5717\\ikvm.8.1.5717.nupkg.sha512",
     "C:\\Users\\Olga.Korneva\\.nuget\\packages\\irely.common\\17.4.6491.18934\\irely.common.17.4.6491.18934.nupkg.sha512",
     "C:\\Users\\Olga.Korneva\\.nuget\\packages\\itextsharp\\5.5.10\\itextsharp.5.5.10.nupkg.sha512",
     "C:\\Users\\Olga.Korneva\\.nuget\\packages\\itextsharp.xmlworker\\5.5.10\\itextsharp.xmlworker.5.5.10.nupkg.sha512",
@@ -49,6 +50,7 @@
     "C:\\Users\\Olga.Korneva\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Olga.Korneva\\.nuget\\packages\\mono.reflection\\1.1.0\\mono.reflection.1.1.0.nupkg.sha512",
     "C:\\Users\\Olga.Korneva\\.nuget\\packages\\netstandard.library\\1.6.0\\netstandard.library.1.6.0.nupkg.sha512",
+    "C:\\Users\\Olga.Korneva\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Olga.Korneva\\.nuget\\packages\\restsharp\\105.2.2\\restsharp.105.2.2.nupkg.sha512",
     "C:\\Users\\Olga.Korneva\\.nuget\\packages\\runtime.native.system\\4.0.0\\runtime.native.system.4.0.0.nupkg.sha512",
     "C:\\Users\\Olga.Korneva\\.nuget\\packages\\runtime.native.system.io.compression\\4.1.0\\runtime.native.system.io.compression.4.1.0.nupkg.sha512",
@@ -220,6 +222,16 @@
       "warningLevel": 1,
       "message": "Package 'IdeaBlade.DevForce.Core 7.4.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "IdeaBlade.DevForce.Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'IKVM 8.1.5717' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "IKVM",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

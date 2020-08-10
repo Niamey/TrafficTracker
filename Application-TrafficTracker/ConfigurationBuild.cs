@@ -8,15 +8,25 @@ namespace Application_TrafficTracker
 {
     public static class ConfigurationBuild
     {
-        public static string BuildConfiguration(string[] args)
+
+        public static void BuildConfiguration(string[] args, IConfiguration configuration)
         {
             IConfiguration Configuration = new ConfigurationBuilder()
            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
            .AddEnvironmentVariables()
            .AddCommandLine(args)
            .Build();
-            var section = Configuration.GetSection("Sectionofsettings").ToString();
-            return section;
+        }
+
+        public static  string GetConnectionString(this Microsoft.Extensions.Configuration.IConfiguration configuration, string name)
+    {
+            string conString = Microsoft.Extensions
+                .Configuration
+                .ConfigurationExtensions
+                .GetConnectionString(configuration, name);
+
+            return conString;
+
         }
     }
 }
