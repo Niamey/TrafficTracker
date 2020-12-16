@@ -2,6 +2,7 @@
   "ConnectionStrings": {
     "myDb1": "Server=myServer;Database=myDb1;Trusted_Connection=True;",
     "myDb2": "Server=myServer;Database=myDb2;Trusted_Connection=True;"
-  }
+  },
+  "KeyIVDirectory": "D:\\KeyIV\\KeyIv.txt"
 }
 

@@ -6,10 +6,15 @@ using System.Text;
 
 namespace Application_TrafficTracker
 {
-    public static class ConfigurationBuild
+    public class ConfigurationBuild
     {
+        private readonly IConfiguration _configuration;
+        public ConfigurationBuild(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
 
-        public static void BuildConfiguration(string[] args, IConfiguration configuration)
+        public  void BuildConfiguration(string[] args, IConfiguration configuration)
         {
             IConfiguration Configuration = new ConfigurationBuilder()
            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
@@ -18,14 +23,8 @@ namespace Application_TrafficTracker
            .Build();
         }
 
-        public static  string GetConnectionString(this Microsoft.Extensions.Configuration.IConfiguration configuration, string name)
+        public  static string GetConnectionString(_configuration, string name)
     {
-            string conString = Microsoft.Extensions
-                .Configuration
-                .ConfigurationExtensions
-                .GetConnectionString(configuration, name);
-
-            return conString;
 
         }
     }
